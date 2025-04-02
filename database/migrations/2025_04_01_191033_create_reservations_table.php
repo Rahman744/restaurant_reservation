@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->index()->constrained()->cascadeOnDelete();
             $table->foreignId('resturant_id')->index()->constrained()->cascadeOnDelete();
             $table->date('date');
+            $table->time('time');
         });
     }
 

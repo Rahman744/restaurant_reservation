@@ -9,4 +9,20 @@ class Restaurant extends Model
 {
     /** @use HasFactory<\Database\Factories\RestaurantFactory> */
     use HasFactory;
+
+
+    public function city(): BelongsTo
+    {
+        return $this->belongsTo(City::class);
+    }
+
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function reservations(): HasMany
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }
